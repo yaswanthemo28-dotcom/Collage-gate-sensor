@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Gate Campus Sensor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>College Gate Campus Sensor</h1>
+    <span id="sensorStatus">DEMO MODE</span>
+</header>
+
+<main>
+    <section class="welcome">
+        <h2>Entry & Exit Dashboard</h2>
+        <p>Campus Gate Monitoring System</p>
+    </section>
+
+    <section class="stats">
+        <div class="card">
+            <h3>Total Entries</h3>
+            <h1 id="entries">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Total Exits</h3>
+            <h1 id="exits">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>People Inside</h3>
+            <h1 id="inside">0</h1>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Gate Sensor Control</h2>
+
+        <button class="entry" onclick="addEntry()">
+            Simulate Entry
+        </button>
+
+        <button class="exit" onclick="addExit()">
+            Simulate Exit
+        </button>
+
+        <button class="reset" onclick="resetData()">
+            Reset
+        </button>
+
+        <p id="message">Waiting for sensor event...</p>
+    </section>
+
+    <section class="panel">
+        <h2>Recent Gate Activity</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+
+            <tbody id="eventRows">
+                <tr>
+                    <td colspan="2">No events recorded</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
